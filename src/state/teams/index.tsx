@@ -5,10 +5,13 @@ import { Team } from 'config/constants/types'
 import { TeamsById, TeamsState } from '../types'
 import { getTeam, getTeams } from './helpers'
 
-const teamsById: TeamsById = teamsList.reduce((accum, team) => ({
+const teamsById: TeamsById = teamsList.reduce(
+  (accum, team) => ({
     ...accum,
     [team.id]: team,
-  }), {})
+  }),
+  {},
+)
 
 const initialState: TeamsState = {
   isInitialized: false,

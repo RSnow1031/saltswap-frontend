@@ -10,9 +10,9 @@ const Wrapper = styled(Page)`
 `
 
 const PageLoader: React.FC = () => (
-    <Wrapper>
-      <Spinner />
-    </Wrapper>
-  )
+  <Wrapper>
+    <Spinner />
+  </Wrapper>
+)
 
 export default PageLoader

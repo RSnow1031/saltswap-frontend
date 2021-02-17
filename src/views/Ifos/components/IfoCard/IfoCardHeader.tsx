@@ -26,13 +26,13 @@ const Description = styled(Text)`
 `
 
 const IfoCardHeader: React.FC<IfoCardHeaderProps> = ({ ifoId, name, subTitle }) => (
-    <StyledIfoCardHeader mb="24px" alignItems="center">
-      <img src={`/images/ifos/${ifoId}.svg`} alt={ifoId} width="64px" height="64px" />
-      <div>
-        <Name>{name}</Name>
-        <Description>{subTitle}</Description>
-      </div>
-    </StyledIfoCardHeader>
-  )
+  <StyledIfoCardHeader mb="24px" alignItems="center">
+    <img src={`/images/ifos/${ifoId}.svg`} alt={ifoId} width="64px" height="64px" />
+    <div>
+      <Name>{name}</Name>
+      <Description>{subTitle}</Description>
+    </div>
+  </StyledIfoCardHeader>
+)
 
 export default IfoCardHeader

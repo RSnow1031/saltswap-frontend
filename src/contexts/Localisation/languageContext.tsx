@@ -30,14 +30,16 @@ const stringTranslationsApi = new StringTranslations({
   token: process.env.REACT_APP_CROWDIN_APIKEY,
 })
 
-const fetchTranslationsForSelectedLanguage = (selectedLanguage) => stringTranslationsApi.listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
+const fetchTranslationsForSelectedLanguage = (selectedLanguage) =>
+  stringTranslationsApi.listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
 
 const LanguageContextProvider = ({ children }) => {
   const [selectedLanguage, setSelectedLanguage] = useState<any>(EN)
   const [translatedLanguage, setTranslatedLanguage] = useState<any>(EN)
   const [translations, setTranslations] = useState<Array<any>>([])
 
-  const getStoredLang = (storedLangCode: string) => allLanguages.filter((language) => language.code === storedLangCode)[0]
+  const getStoredLang = (storedLangCode: string) =>
+    allLanguages.filter((language) => language.code === storedLangCode)[0]
 
   useEffect(() => {
     const storedLangCode = localStorage.getItem(CACHE_KEY)

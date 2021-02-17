@@ -33,7 +33,8 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
     handleApprove,
     handleConfirm,
   } = useApproveConfirmTransaction({
-    onApprove: () => pancakeRabbitsContract.methods.approve(getPancakeProfileAddress(), tokenId).send({ from: account }),
+    onApprove: () =>
+      pancakeRabbitsContract.methods.approve(getPancakeProfileAddress(), tokenId).send({ from: account }),
     onConfirm: () => {
       if (!profile.isActive) {
         return profileContract.methods.reactivateProfile(getPancakeRabbitsAddress(), tokenId).send({ from: account })

@@ -20,21 +20,21 @@ const ButtonWrapper = styled.div`
 `
 
 const LabelButton: React.FC<Props> = ({ value, label, buttonLabel, onClick, disabled = false }) => (
-    <div>
-      {label && (
-        <Text fontSize="14px" color="textSubtle">
-          {label}
-        </Text>
-      )}
-      <ButtonWrapper>
-        <Text bold fontSize="20px">
-          {value}
-        </Text>
-        <Button onClick={onClick} disabled={disabled}>
-          {buttonLabel}
-        </Button>
-      </ButtonWrapper>
-    </div>
-  )
+  <div>
+    {label && (
+      <Text fontSize="14px" color="textSubtle">
+        {label}
+      </Text>
+    )}
+    <ButtonWrapper>
+      <Text bold fontSize="20px">
+        {value}
+      </Text>
+      <Button onClick={onClick} disabled={disabled}>
+        {buttonLabel}
+      </Button>
+    </ButtonWrapper>
+  </div>
+)
 
 export default LabelButton

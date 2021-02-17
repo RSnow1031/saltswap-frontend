@@ -37,15 +37,15 @@ const BunnyImageWrapper = styled.div`
 `
 
 const PastDrawsPage: React.FC = () => (
-    <Cards>
-      <PastLotteryRoundViewer />
-      <SecondCardColumnWrapper>
-        <PastDrawsHistoryCard />
-        <BunnyImageWrapper>
-          <img src="/images/pancake-lottery-bunny.png" alt="lottery bunny" />
-        </BunnyImageWrapper>
-      </SecondCardColumnWrapper>
-    </Cards>
-  )
+  <Cards>
+    <PastLotteryRoundViewer />
+    <SecondCardColumnWrapper>
+      <PastDrawsHistoryCard />
+      <BunnyImageWrapper>
+        <img src="/images/pancake-lottery-bunny.png" alt="lottery bunny" />
+      </BunnyImageWrapper>
+    </SecondCardColumnWrapper>
+  </Cards>
+)
 
 export default PastDrawsPage

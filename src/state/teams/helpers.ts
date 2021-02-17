@@ -35,10 +35,13 @@ export const getTeam = async (teamId: number): Promise<Team> => {
  */
 export const getTeams = async (): Promise<TeamsById> => {
   try {
-    const teamsById = teamsList.reduce((accum, team) => ({
+    const teamsById = teamsList.reduce(
+      (accum, team) => ({
         ...accum,
         [team.id]: team,
-      }), {})
+      }),
+      {},
+    )
     const nbTeams = await profileContract.methods.numberTeams().call()
     const calls = []
 

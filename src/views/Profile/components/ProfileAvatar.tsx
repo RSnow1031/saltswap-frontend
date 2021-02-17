@@ -54,10 +54,10 @@ const AvatarInactive = styled(NoProfileAvatarIcon)`
 `
 
 const ProfileAvatar: React.FC<ProfileAvatarProps> = ({ profile }) => (
-    <AvatarWrapper bg={`/images/nfts/${profile.nft?.images?.md}`}>
-      {!profile.isActive && <AvatarInactive />}
-      <TeamAvatar src={`/images/teams/${profile.team.images.alt}`} alt={profile.team.name} />
-    </AvatarWrapper>
-  )
+  <AvatarWrapper bg={`/images/nfts/${profile.nft?.images?.md}`}>
+    {!profile.isActive && <AvatarInactive />}
+    <TeamAvatar src={`/images/teams/${profile.team.images.alt}`} alt={profile.team.name} />
+  </AvatarWrapper>
+)
 
 export default ProfileAvatar

@@ -16,10 +16,10 @@ const StyledCardContent = styled.div`
 `
 
 const CardContent = ({ imgSrc, children }) => (
-    <StyledCardContent>
-      <Image src={imgSrc} alt="card icon" />
-      <Content>{children}</Content>
-    </StyledCardContent>
-  )
+  <StyledCardContent>
+    <Image src={imgSrc} alt="card icon" />
+    <Content>{children}</Content>
+  </StyledCardContent>
+)
 
 export default CardContent

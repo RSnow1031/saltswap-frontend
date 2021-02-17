@@ -10,12 +10,12 @@ export interface InputProps {
 }
 
 const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, startAdornment, value }) => (
-    <StyledInputWrapper>
-      {!!startAdornment && startAdornment}
-      <StyledInput placeholder={placeholder} value={value} onChange={onChange} />
-      {!!endAdornment && endAdornment}
-    </StyledInputWrapper>
-  )
+  <StyledInputWrapper>
+    {!!startAdornment && startAdornment}
+    <StyledInput placeholder={placeholder} value={value} onChange={onChange} />
+    {!!endAdornment && endAdornment}
+  </StyledInputWrapper>
+)
 
 const StyledInputWrapper = styled.div`
   align-items: center;

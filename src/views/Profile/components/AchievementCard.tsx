@@ -19,17 +19,17 @@ const Details = styled(Flex)`
 `
 
 const AchievementCard: React.FC<AchievementCardProps> = ({ achievement }) => (
-    <Flex>
-      <AchievementAvatar badge={achievement.badge} />
-      <Details>
-        <AchievementTitle title={achievement.title} />
-        <AchievementDescription description={achievement.description} />
-      </Details>
-      <Flex alignItems="center">
-        <PrizeIcon width="18px" color="textSubtle" mr="4px" />
-        <Text color="textSubtle">{achievement.points.toLocaleString()}</Text>
-      </Flex>
+  <Flex>
+    <AchievementAvatar badge={achievement.badge} />
+    <Details>
+      <AchievementTitle title={achievement.title} />
+      <AchievementDescription description={achievement.description} />
+    </Details>
+    <Flex alignItems="center">
+      <PrizeIcon width="18px" color="textSubtle" mr="4px" />
+      <Text color="textSubtle">{achievement.points.toLocaleString()}</Text>
     </Flex>
-  )
+  </Flex>
+)
 
 export default AchievementCard

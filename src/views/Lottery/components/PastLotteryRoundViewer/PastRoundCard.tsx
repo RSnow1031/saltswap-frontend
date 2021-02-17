@@ -11,6 +11,8 @@ interface PastRoundCardProps {
   data: DataResponse
 }
 
-const PastRoundCard: React.FC<PastRoundCardProps> = ({ error, data }) => <Card>{error.message ? <PastRoundCardError error={error} /> : <PastRoundCardDetails data={data} />}</Card>
+const PastRoundCard: React.FC<PastRoundCardProps> = ({ error, data }) => (
+  <Card>{error.message ? <PastRoundCardError error={error} /> : <PastRoundCardDetails data={data} />}</Card>
+)
 
 export default PastRoundCard

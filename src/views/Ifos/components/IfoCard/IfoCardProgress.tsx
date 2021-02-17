@@ -11,9 +11,9 @@ const StyledProgress = styled.div`
 `
 
 const IfoCardProgress: React.FC<IfoCardProgressProps> = ({ progress }) => (
-    <StyledProgress>
-      <Progress primaryStep={progress} />
-    </StyledProgress>
-  )
+  <StyledProgress>
+    <Progress primaryStep={progress} />
+  </StyledProgress>
+)
 
 export default IfoCardProgress

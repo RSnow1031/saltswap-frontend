@@ -59,22 +59,22 @@ const SelectionCard: React.FC<SelectionCardProps> = ({
   children,
   ...props
 }) => (
-    <StyledCard isSuccess={isChecked} isDisabled={disabled} mb="16px" {...props}>
-      <Label isDisabled={disabled}>
-        <Body>
-          <Radio
-            name={name}
-            checked={isChecked}
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            disabled={disabled}
-            style={{ flex: 'none' }}
-          />
-          <Children>{children}</Children>
-        </Body>
-        <StyledBackgroundImage src={image} />
-      </Label>
-    </StyledCard>
-  )
+  <StyledCard isSuccess={isChecked} isDisabled={disabled} mb="16px" {...props}>
+    <Label isDisabled={disabled}>
+      <Body>
+        <Radio
+          name={name}
+          checked={isChecked}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          disabled={disabled}
+          style={{ flex: 'none' }}
+        />
+        <Children>{children}</Children>
+      </Body>
+      <StyledBackgroundImage src={image} />
+    </Label>
+  </StyledCard>
+)
 
 export default SelectionCard

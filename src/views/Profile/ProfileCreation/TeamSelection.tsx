@@ -44,22 +44,22 @@ const Team: React.FC = () => {
           </Text>
           {teamValues &&
             teamValues.map((team) => (
-                <SelectionCard
-                  key={team.name}
-                  name="teams-selection"
-                  value={team.id}
-                  isChecked={currentTeamId === team.id}
-                  image={`/images/teams/${team.images.md}`}
-                  onChange={handleTeamSelection}
-                  disabled={!team.isJoinable}
-                >
-                  <Text bold>{team.name}</Text>
-                  <Flex>
-                    <CommunityIcon mr="8px" />
-                    <Text>{team.users.toLocaleString()}</Text>
-                  </Flex>
-                </SelectionCard>
-              ))}
+              <SelectionCard
+                key={team.name}
+                name="teams-selection"
+                value={team.id}
+                isChecked={currentTeamId === team.id}
+                image={`/images/teams/${team.images.md}`}
+                onChange={handleTeamSelection}
+                disabled={!team.isJoinable}
+              >
+                <Text bold>{team.name}</Text>
+                <Flex>
+                  <CommunityIcon mr="8px" />
+                  <Text>{team.users.toLocaleString()}</Text>
+                </Flex>
+              </SelectionCard>
+            ))}
         </CardBody>
       </Card>
       <NextStepButton onClick={actions.nextStep} disabled={currentTeamId === null}>

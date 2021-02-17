@@ -48,12 +48,12 @@ export const fetchFarmUserDataAsync = (account) => async (dispatch) => {
   const userFarmEarnings = await fetchFarmUserEarnings(account)
 
   const arrayOfUserDataObjects = userFarmAllowances.map((farmAllowance, index) => ({
-      index,
-      allowance: userFarmAllowances[index],
-      tokenBalance: userFarmTokenBalances[index],
-      stakedBalance: userStakedBalances[index],
-      earnings: userFarmEarnings[index],
-    }))
+    index,
+    allowance: userFarmAllowances[index],
+    tokenBalance: userFarmTokenBalances[index],
+    stakedBalance: userStakedBalances[index],
+    earnings: userFarmEarnings[index],
+  }))
 
   dispatch(setFarmUserData({ arrayOfUserDataObjects }))
 }

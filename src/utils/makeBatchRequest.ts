@@ -15,17 +15,20 @@ const makeBatchRequest = (calls: any[]) => {
     const web3 = getWeb3()
     const batch = new web3.BatchRequest()
 
-    const promises = calls.map((call) => new Promise((resolve, reject) => {
-        batch.add(
-          call.request({}, (err, result) => {
-            if (err) {
-              reject(err)
-            } else {
-              resolve(result)
-            }
-          }),
-        )
-      }))
+    const promises = calls.map(
+      (call) =>
+        new Promise((resolve, reject) => {
+          batch.add(
+            call.request({}, (err, result) => {
+              if (err) {
+                reject(err)
+              } else {
+                resolve(result)
+              }
+            }),
+          )
+        }),
+    )
 
     batch.execute()
 

@@ -21,12 +21,12 @@ const Wrapper = styled.div`
 `
 
 const DetailsButton: React.FC<DetailsButtonProps> = ({ onClick }) => (
-    <Wrapper onClick={() => onClick()}>
-      <Text color="primary" bold>
-        Details
-      </Text>
-      <ChevronDownIcon />
-    </Wrapper>
-  )
+  <Wrapper onClick={() => onClick()}>
+    <Text color="primary" bold>
+      Details
+    </Text>
+    <ChevronDownIcon />
+  </Wrapper>
+)
 
 export default DetailsButton

@@ -34,10 +34,10 @@ const Header: React.FC = () => {
       </Text>
       <Breadcrumbs>
         {steps.map(({ translationId, label }, index) => (
-            <Text key={label} color={index <= currentStep ? 'text' : 'textDisabled'}>
-              {TranslateString(translationId, label)}
-            </Text>
-          ))}
+          <Text key={label} color={index <= currentStep ? 'text' : 'textDisabled'}>
+            {TranslateString(translationId, label)}
+          </Text>
+        ))}
       </Breadcrumbs>
     </Wrapper>
   )
