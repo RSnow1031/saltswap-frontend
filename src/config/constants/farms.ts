@@ -6,7 +6,7 @@ const farms: FarmConfig[] = [
     pid: 0,
     lpSymbol: 'CAKE',
     lpAddresses: {
-      97: '0x9C21123D94b93361a29B2C2EFB3d5CD8B17e0A9e',
+      97: '0x89dcddca577f3658a451775d58ea99da532263c8',
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     tokenSymbol: 'SYRUP',
